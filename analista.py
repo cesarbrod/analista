@@ -3,7 +3,7 @@ import os
 from google import genai
 # from google.colab import userdata
 from google.genai import types
-os.environ['GOOGLE_API_KEY'] = 'AIzaSyCXatd9oYlvxfS6HMcHHfynN2OTFIgY2f0'
+os.environ['GOOGLE_API_KEY'] = 'sua api key'
 client = genai.Client()
 modelo = 'gemini-2.0-flash'
 chat_config = types.GenerateContentConfig(
