@@ -1,0 +1,189 @@
+/* static/style.css */
+body {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    background-color: #f0e6d2; /* Cor de pergaminho, papel antigo */
+    color: #3a241d; /* Marrom escuro para texto */
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5d4037; /* Marrom mais escuro para o cabeçalho */
+}
+
+header h1 {
+    font-size: 2.2em; /* Reduzido para caber melhor em telas menores */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #a1887f; /* Sombra sutil */
+}
+
+.chat-container {
+    width: 90%;
+    max-width: 650px; /* Um pouco mais estreito */
+    background-color: #fff8e1; /* Cor creme, como página de caderno antigo */
+    border: 5px solid #6d4c41; /* Borda marrom escura, como madeira */
+    border-radius: 8px; /* Cantos levemente arredondados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); /* Sombra para profundidade */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.chat-history {
+    height: 350px; /* Altura ajustada */
+    overflow-y: auto; /* Barra de rolagem se necessário */
+    border-bottom: 2px solid #a1887f; /* Linha separadora, marrom claro */
+    margin-bottom: 15px;
+    padding-right: 10px; /* Espaço para barra de rolagem */
+}
+
+/* Estilização da barra de rolagem (para navegadores WebKit como Chrome/Safari) */
+.chat-history::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-history::-webkit-scrollbar-track {
+    background: #fff8e1; 
+    border-radius: 4px;
+}
+
+.chat-history::-webkit-scrollbar-thumb {
+    background-color: #8d6e63; /* Cor do polegar da barra de rolagem */
+    border-radius: 4px;
+    border: 2px solid #fff8e1; 
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    line-height: 1.4;
+    max-width: 90%; /* Mensagens podem ser um pouco mais largas */
+    word-wrap: break-word; 
+}
+
+.message .speaker {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #5d4037; 
+}
+
+.analyst-message {
+    background-color: #efebe9; /* Bege acinzentado claro para o analista */
+    text-align: left;
+    margin-right: auto; 
+    border-bottom-left-radius: 3px; /* Efeito de balão de fala */
+}
+
+.user-message {
+    background-color: #d7ccc8; /* Bege um pouco mais escuro para o usuário */
+    text-align: left; 
+    margin-left: auto; 
+    border-bottom-right-radius: 3px;
+}
+
+.chat-input-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.chat-input-form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 12px;
+    border: 2px solid #a1887f; 
+    border-radius: 18px 0 0 18px; /* Cantos arredondados */
+    font-size: 1em;
+    background-color: #fffdf9;
+    color: #3a241d;
+}
+.chat-input-form input[type="text"]:focus {
+    outline: none;
+    border-color: #6d4c41; 
+    box-shadow: 0 0 5px rgba(109, 76, 65, 0.4);
+}
+
+.chat-input-form button {
+    padding: 10px 18px;
+    background-color: #795548; /* Marrom, como cadeira de couro ou escrivaninha */
+    color: white;
+    border: none;
+    border-radius: 0 18px 18px 0;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.chat-input-form button:hover {
+    background-color: #5d4037; /* Marrom mais escuro ao passar o mouse */
+}
+
+.reset-button-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.reset-button, .button-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #8d6e63; /* Marrom suave */
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+    border: 1px solid #70544a;
+}
+
+.reset-button:hover, .button-link:hover {
+    background-color: #6d4c41;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.85em;
+    color: #755c50; /* Marrom suave para o rodapé */
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+/* Estilos para a página de erro */
+.error-container {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    background-color: #fff8e1;
+    border: 3px solid #c62828; /* Borda vermelha para erro */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.error-container h1 {
+    color: #b71c1c; /* Vermelho escuro para o título do erro */
+    font-size: 1.8em;
+}
+.error-container h2 {
+    color: #c62828;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+.error-container p.error-message {
+    font-size: 1.1em;
+    color: #333;
+    background-color: #ffebee; /* Fundo rosa claro para a mensagem de erro */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px dashed #c62828;
+    margin-bottom: 20px;
+}
