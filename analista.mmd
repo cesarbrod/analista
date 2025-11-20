@@ -1,0 +1,10 @@
+flowchart TD
+    Start([Start]) --> Init[Initialize GenAI Client]
+    Init --> Config["Configure Model and Persona (Analista de Bagé)"]
+    Config --> StartChat[Start Chat Session]
+    StartChat --> Input{User Input?}
+    Input -->|'tchau'| End([End])
+    Input -->|Message| Send[Send Message to Gemini]
+    Send --> Receive[Receive Response]
+    Receive --> Print[Print 'Analista: ' + Response]
+    Print --> Input
