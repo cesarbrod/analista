@@ -9,7 +9,6 @@ os.environ['GOOGLE_API_KEY'] = 'sua api key'
 client = genai.Client()
 # Experimente trocar os modelos na linha a seguir e veja como esse programa se comporta.
 # Eis alguns modelos disponíveis:
-# modelo = 'gemini-2.0-flash'
 # modelo = 'gemini-3-pro-preview'
 # modelo = 'gemini-2.5-flash'
 # modelo = 'gemini-2.5-flash-lite'
