@@ -1,5 +1,6 @@
 # Um chat simples simulando uma consulta com o Analista de Bagé
 import os
+os.system('clear') # limpa a tela
 from google import genai
 # from google.colab import userdata
 from google.genai import types
@@ -19,9 +20,9 @@ chat_config = types.GenerateContentConfig(
 )
 chat = client.chats.create(model=modelo, config=chat_config)
 # modifique as linhas a seguir para que o diálogo com o analista ocorra da forma que você deseja
-prompt = input('Bora conversar? O que te aflige? ')
+prompt = input('Bora conversar? O que te aflige? \nTU :> ')
 while prompt != 'tchau':
   resposta = chat.send_message(prompt)
   print('\nAnalista: ',resposta.text)
   print('\n')
-  prompt = input('Tua vez! ')
+  prompt = input('\nTU :> ')
