@@ -19,3 +19,26 @@ Execute o comando:
 `python3 analista.py`
 
 Para ver o programa rodando na web acesse http://brodtec.com/analista
+
+## O Analista na sua máquina!!!
+
+Você pode rodar a versão ```analista.local.py```, nessa mesma pasta, sem a necessidade de se conectar a uma IA externa. Para isso, você deve primeiro instalar o ```ollama```. Para instruções completas, visite:
+
+https://ollama.com/download
+
+Em resumo, você pode instalar a versão mais recente do ollama com o seguinte comando:
+
+```curl -fsSL https://ollama.com/install.sh | sh```
+
+A seguir, instale o llama3 com
+
+```ollama run llama3.2```
+
+Depois você pode instalar outros modelos.
+
+Isso deve ser o suficiente para você rodar o Analista em modo local com
+
+```python3 analista.local.py```
+
+
+
